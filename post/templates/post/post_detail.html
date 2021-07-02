@@ -1,0 +1,19 @@
+{% extends 'post/post_base.html' %}
+{% block post_content %}
+    <h1 class="posttitle loader">{{ post.title }}</h1>
+    {% if post.published_date %}
+        <div class="date postdate">
+            {{ post.published_date }}
+
+        </div>
+    
+    
+    
+    {% endif %}
+<hr>
+<hr>
+
+    <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add Comment</a>
+
+
+{% endblock post_content %}
